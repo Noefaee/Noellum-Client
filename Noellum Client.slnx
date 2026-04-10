@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Noellum Client/Noellum Client.vcxproj" />
+  <Project Path="Noellum Client/Noellum Client.vcxproj" Id="8ce35745-a3c7-4c16-8151-ea56968c4b50" />
 </Solution>

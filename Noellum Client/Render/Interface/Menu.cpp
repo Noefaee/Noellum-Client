@@ -29,6 +29,7 @@ void Interface::Draw()
     if (tab == 0) DrawTabs();
     else if (tab == 1) DrawVisuals();
     else if (tab == 2) DrawInternal();
+	else if (tab == 3) DrawLogger();
 
     ImGui::End();
 }

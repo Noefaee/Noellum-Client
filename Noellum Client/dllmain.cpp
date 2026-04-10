@@ -10,6 +10,7 @@
 #include "Libs/ImGui/backends/imgui_impl_dx11.h"
 #include "Libs/ImGui/backends/imgui_impl_win32.h"
 #include "Libs/Fonts/FontData.h"
+#include "Utils/Logger.hpp"
 
 // Render
 #include "Render/Render.h"
@@ -129,6 +130,8 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 
 DWORD WINAPI MainThread(LPVOID lpReserved)
 {
+    Utils::Logger::Log("Noellum Module Injected!", "INFO");
+    Utils::Logger::Log("Using C++20 Standard in Lab PC", "INFO");
     bool InitHook = false;
     do
     {

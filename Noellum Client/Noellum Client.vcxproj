@@ -203,6 +203,7 @@
     <ClInclude Include="Render\Interface\Theme.h" />
     <ClInclude Include="Render\Render.h" />
     <ClInclude Include="Utils\Dumper.hpp" />
+    <ClInclude Include="Utils\Logger.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />

@@ -1,5 +1,9 @@
 #pragma once
 
+#include <vector>
+#include <string>
+#include <cstdio>
+
 namespace Dumper {
     std::vector<Unity::CComponent*> DumpComponents() {
         std::vector<Unity::CComponent*> compenents_to_return;

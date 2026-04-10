@@ -10,4 +10,5 @@ namespace Interface {
     void DrawTabs();
     void DrawVisuals();
     void DrawInternal();
+    void DrawLogger();
 }
