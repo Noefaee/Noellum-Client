@@ -14,6 +14,7 @@
 
 // Render
 #include "Render/Render.h"
+#include "Render/Interface/Theme.h"
 
 
 typedef LRESULT(CALLBACK* WNDPROC)(HWND, UINT, WPARAM, LPARAM);
@@ -41,14 +42,12 @@ LRESULT __stdcall WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
     if (ShowMenu)
     {
-        // Berikan input ke ImGui
         ImGui_ImplWin32_WndProcHandler(hWnd, uMsg, wParam, lParam);
-        // Blocking input ke game jika mouse/keyboard sedang digunakan di menu
         ImGuiIO& io = ImGui::GetIO();
-        if (io.WantCaptureMouse && (uMsg >= WM_MOUSEFIRST && uMsg <= WM_MOUSELAST))
-            return true;
-        if (io.WantCaptureKeyboard && (uMsg >= WM_KEYFIRST && uMsg <= WM_KEYLAST))
-            return true;
+        if (uMsg >= WM_MOUSEFIRST && uMsg <= WM_MOUSELAST)
+            return 0;
+        if (uMsg >= WM_KEYFIRST && uMsg <= WM_KEYLAST)
+            return 0;
     }
 
     return CallWindowProc(oWndProc, hWnd, uMsg, wParam, lParam);
@@ -98,6 +97,7 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 
             ImGui_ImplWin32_Init(window);
             ImGui_ImplDX11_Init(pDevice, pContext);
+			UI::Style();
 
             init = true;
         }
