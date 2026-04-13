@@ -19,38 +19,38 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>18.0</VCProjectVersion>
+    <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8ce35745-a3c7-4c16-8151-ea56968c4b50}</ProjectGuid>
-    <RootNamespace>NoellumClient</RootNamespace>
+    <ProjectGuid>{c3d35735-6b30-457f-a028-b5e132da2493}</ProjectGuid>
+    <RootNamespace>NoellumInjector</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v145</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v145</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -72,74 +72,76 @@
   <PropertyGroup Label="UserMacros" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;NOELLUMCLIENT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableUAC>false</EnableUAC>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;NOELLUMCLIENT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableUAC>false</EnableUAC>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;NOELLUMCLIENT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableUAC>false</EnableUAC>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;NOELLUMCLIENT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableUAC>false</EnableUAC>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h" />
+    <ClCompile Include="Libs\ImGui\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Libs\ImGui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="Libs\ImGui\imgui.cpp" />
+    <ClCompile Include="Libs\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="Libs\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="Libs\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="Libs\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="Libs\Kiero\kiero.cpp" />
+    <ClCompile Include="Libs\Kiero\minhook\src\buffer.c" />
+    <ClCompile Include="Libs\Kiero\minhook\src\hde\hde32.c" />
+    <ClCompile Include="Libs\Kiero\minhook\src\hde\hde64.c" />
+    <ClCompile Include="Libs\Kiero\minhook\src\hook.c" />
+    <ClCompile Include="Libs\Kiero\minhook\src\trampoline.c" />
+    <ClCompile Include="Noellum Injector.cpp" />
+    <ClCompile Include="Render\GlobalRender.cpp" />
+    <ClCompile Include="Render\Interface\InjectorMenu.cpp" />
+    <ClCompile Include="Render\Render.cpp" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="Libs\Fonts\FontData.h" />
     <ClInclude Include="Libs\Il2CppResolver\API\Callback.hpp" />
     <ClInclude Include="Libs\Il2CppResolver\API\Class.hpp" />
@@ -196,46 +198,18 @@
     <ClInclude Include="Libs\Kiero\minhook\src\hde\table32.h" />
     <ClInclude Include="Libs\Kiero\minhook\src\hde\table64.h" />
     <ClInclude Include="Libs\Kiero\minhook\src\trampoline.h" />
-    <ClInclude Include="pch.h" />
     <ClInclude Include="Render\GlobalRender.h" />
-    <ClInclude Include="Render\Interface\Menu.h" />
-    <ClInclude Include="Render\Interface\State.h" />
-    <ClInclude Include="Render\Interface\Theme.h" />
     <ClInclude Include="Render\Render.h" />
-    <ClInclude Include="Utils\Dumper.hpp" />
-    <ClInclude Include="Utils\Logger.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="Libs\ImGui\backends\imgui_impl_dx11.cpp" />
-    <ClCompile Include="Libs\ImGui\backends\imgui_impl_win32.cpp" />
-    <ClCompile Include="Libs\ImGui\imgui.cpp" />
-    <ClCompile Include="Libs\ImGui\imgui_demo.cpp" />
-    <ClCompile Include="Libs\ImGui\imgui_draw.cpp" />
-    <ClCompile Include="Libs\ImGui\imgui_tables.cpp" />
-    <ClCompile Include="Libs\ImGui\imgui_widgets.cpp" />
-    <ClCompile Include="Libs\Kiero\kiero.cpp" />
-    <ClCompile Include="Libs\Kiero\minhook\src\buffer.c" />
-    <ClCompile Include="Libs\Kiero\minhook\src\hde\hde32.c" />
-    <ClCompile Include="Libs\Kiero\minhook\src\hde\hde64.c" />
-    <ClCompile Include="Libs\Kiero\minhook\src\hook.c" />
-    <ClCompile Include="Libs\Kiero\minhook\src\trampoline.c" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="Render\GlobalRender.cpp" />
-    <ClCompile Include="Render\Interface\Menu.cpp" />
-    <ClCompile Include="Render\Interface\Tabs.cpp" />
-    <ClCompile Include="Render\Render.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Libs\Kiero\minhook\dll_resources\MinHook.def" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Libs\Kiero\minhook\dll_resources\MinHook.rc" />
+    <ResourceCompile Include="Noellum Injector.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\x64\Release\Noellum Client.dll" />
+    <None Include="Libs\Kiero\minhook\dll_resources\MinHook.def" />
+    <None Include="rcdata1.bin" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -3,5 +3,8 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Noellum Client/Noellum Client.vcxproj" Id="8ce35745-a3c7-4c16-8151-ea56968c4b50" />
+  <Project Path="Noellum Client/Noellum Client.vcxproj" Id="8ce35745-a3c7-4c16-8151-ea56968c4b50">
+    <BuildDependency Project="Noellum Injector/Noellum Injector.vcxproj" />
+  </Project>
+  <Project Path="Noellum Injector/Noellum Injector.vcxproj" Id="c3d35735-6b30-457f-a028-b5e132da2493" />
 </Solution>
